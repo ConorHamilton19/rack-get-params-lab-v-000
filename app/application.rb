@@ -17,7 +17,8 @@ class Application
           resp.write "Your cart is empty"
         end
     elsif req.path.match(/add/)
-      add_item = require.params("item")
+      add_item = require.params["item"]
+      
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
