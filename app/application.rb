@@ -18,7 +18,7 @@ class Application
           resp.write "Your cart is empty"
         end
     elsif req.path.match(/add/)
-      add_item = require.params["item"]
+      add_item = req.params["item"]
         if @@items.include? add_item
          @@cart << add_item
          resp.write "Added #{add_item} to cart"
