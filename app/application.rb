@@ -20,7 +20,7 @@ class Application
       add_item = require.params["item"]
         if @@items.include? add_item
          @@cart << add_item
-         resp.write "added #{add_item}"
+         resp.write "Added #{add_item} to cart"
         else
          resp.write "We don't have that item!"
        end 
